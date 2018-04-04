@@ -318,8 +318,10 @@ def _dir2pi(option, argv):
                  "<meta name='api-version' value='2' /></head><body>\n")
 
     processed_pkg = set()
+    files = os.listdir(pkgdir)
     import random
-    for file in random.shuffle(os.listdir(pkgdir)):
+    random.shuffle(files)
+    for file in files:
         pkg_filepath = os.path.join(pkgdir, file)
         if not os.path.isfile(pkg_filepath):
             continue
