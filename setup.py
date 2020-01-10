@@ -31,6 +31,7 @@ setup(
             'pip2tgz = libpip2pi.commands:pip2tgz',
         ],
     },
+    python_requires='>=3.8',
     install_requires=[
         "pip>=1.1",
     ],
